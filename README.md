@@ -47,7 +47,7 @@ multimedia_class/
 ## 📦 环境依赖
 - Python 3.10 
 - ffmpeg 4.2
-- 以及运行RIFE所需要的环境依赖
+- 以及运行RIFE所需要的环境依赖([RIFE](https://github.com/megvii-research/ECCV2022-RIFE))
 ```bash
 pip install numpy opencv-python moviepy==1.0.3 scikit-image
 ```
