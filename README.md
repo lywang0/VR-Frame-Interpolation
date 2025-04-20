@@ -1,7 +1,7 @@
 
 # 🎥 CourseProject-VR-Interpolation
 
-本项目实现了高帧率 VR 视频的多种插帧方法，包括：
+本课程实验作业实现了高帧率 VR 视频的多种插帧方法，包括：
 
 - 帧平均法（Mean Interpolation）
 - 深度插帧网络 RIFE（Real-Time Intermediate Flow Estimation）
