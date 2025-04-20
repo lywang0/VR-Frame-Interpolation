@@ -45,6 +45,7 @@ multimedia_class/
 ---
 
 ## 📦 环境依赖
+- Ubuntu 20.04
 - Python 3.10 
 - ffmpeg 4.2
 - 以及运行RIFE所需要的环境依赖([RIFE仓库](https://github.com/megvii-research/ECCV2022-RIFE))
