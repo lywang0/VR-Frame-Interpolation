@@ -132,7 +132,7 @@ results/merged_video/
 本项目中使用的深度插帧方法基于 [RIFE (Real-Time Intermediate Flow Estimation)](https://github.com/megvii-research/ECCV2022-RIFE)，于 ECCV 2022 收录。
 
 - RIFE官方仓库地址：https://github.com/megvii-research/ECCV2022-RIFE
-- RIFE论文地址：[RIFE: Real-Time Intermediate Flow Estimation for Video Frame Interpolation (ECCV 2022)](https://arxiv.org/abs/2204.07433)
+- RIFE论文地址：[RIFE: Real-Time Intermediate Flow Estimation for Video Frame Interpolation (ECCV 2022)](https://arxiv.org/abs/2011.06294)
 
 本项目已对其接口进行了适配，用于本项目中的自动化插帧流程。
 
