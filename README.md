@@ -107,7 +107,7 @@ python figure.py
 ---
 
 ## 📌 命名规范说明
-[![K-M-RHAT-DR-NGA-731-JC.png](https://i.postimg.cc/266XBRp5/K-M-RHAT-DR-NGA-731-JC.png)]
+![K-M-RHAT-DR-NGA-731-JC.png](https://i.postimg.cc/266XBRp5/K-M-RHAT-DR-NGA-731-JC.png)
 
 - 原始视频块命名：`{t}_{x}_{y}_out.mp4`
 - 插帧输出命名：
