@@ -127,7 +127,7 @@ results/merged_video/
 └── final_merged_adaptive.mp4
 ```
 
-## 🔗 插帧模型来源：RIFE
+## Reference
 
 本项目中使用的深度插帧方法基于 [RIFE (Real-Time Intermediate Flow Estimation)](https://github.com/megvii-research/ECCV2022-RIFE)，该模型最初由旷视研究院提出，并于 ECCV 2022 收录。
 
