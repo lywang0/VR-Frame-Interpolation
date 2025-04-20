@@ -134,11 +134,9 @@ results/merged_video/
 - 官方仓库地址：https://github.com/megvii-research/ECCV2022-RIFE
 - 论文地址：[RIFE: Real-Time Intermediate Flow Estimation for Video Frame Interpolation (ECCV 2022)](https://arxiv.org/abs/2204.07433)
 
-我们已对其接口进行了适配，用于本项目中的自动化插帧流程。
+该项目已对其接口进行了适配，用于本项目中的自动化插帧流程。
 
 
 ---
 
-## 📅 最后更新
 
-由 lywang 于 2025-04-20 编写与维护。
