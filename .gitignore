@@ -1,0 +1,17 @@
+ECCV2022-RIFE/
+
+results/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.bak
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
