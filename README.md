@@ -18,7 +18,7 @@
 ```
 multimedia_class/
 ├── data/                            # 原始 30FPS 视频块
-├── ECCV2022-RIFE/                   # RIFE 插帧模型与脚本
+├── ECCV2022-RIFE/                   # RIFE 插帧模型与脚本（从RIFE官方仓库中下载）
 ├── results/                         # 输出目录
 │   ├── mean_interp/                 # 帧平均法插帧结果
 │   ├── rife_interp/                 # RIFE 插帧结果
