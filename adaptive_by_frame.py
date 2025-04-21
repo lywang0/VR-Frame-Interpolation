@@ -33,7 +33,7 @@ def adaptive_interpolate_by_frame(input_path, mean_path, rife_path, output_path,
         interp_frame = (
             mean_frames[2 * i + 1]
             if ssim_score > threshold
-            else rife_frames[i]
+            else rife_frames[2 * i + 1]
         )
         source = "MEAN" if ssim_score > threshold else "RIFE"
         adaptive_frames.append(interp_frame)
@@ -42,11 +42,25 @@ def adaptive_interpolate_by_frame(input_path, mean_path, rife_path, output_path,
 
     adaptive_frames.append(original_frames[-1])  # 加入最后一帧
 
+    for i in range(len(adaptive_frames)):
+        f1 = adaptive_frames[i]
+        f2 = rife_frames[i]
+        psnr_val = cv2.PSNR(f1, f2)
+        decision_log.append(f"frame_{i} PSNR={psnr_val:.4f}")
+
     # 写视频
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     rgb_frames = [cv2.cvtColor(f, cv2.COLOR_BGR2RGB) for f in adaptive_frames]
-    clip = ImageSequenceClip(rgb_frames, fps=60)
-    clip.write_videofile(output_path, codec="libx264", audio=False, verbose=False, logger=None)
+    clip = ImageSequenceClip(rgb_frames, fps=59)
+    clip.write_videofile(
+        output_path,
+        codec="libx264",
+        audio=False,
+        verbose=False,
+        logger=None,
+        ffmpeg_params=["-crf", "18"]         # 默认为 23，调成 18 会更清晰
+    )
+
 
     # 写日志
     log_path = os.path.join(os.path.dirname(output_path), "adaptive_interp_by_frame_latency_log.txt")

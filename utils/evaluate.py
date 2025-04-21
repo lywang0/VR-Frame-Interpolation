@@ -1,6 +1,6 @@
 from video_utils import load_video_frames
 import cv2, sys, os, argparse
-from utils.configuration import DATA_DIR, RESULTS_DIR
+from configuration import DATA_DIR, RESULTS_DIR
 
 def psnr(original_path, interp_path):
     ori_frames = load_video_frames(original_path)
@@ -21,7 +21,7 @@ def compare_psnr(gt_dir, result_dir, method_name, log_path="psnr_comparison_log.
                 for y in range(4):
                     name = f"{t}_{x}_{y}"
                     gt_path = f"{gt_dir}/{name}_rife.mp4"  # RIFE 作为参考
-                    pred_path = f"{result_dir}/{name}_{method_name}.mp4" 
+                    pred_path = f"{result_dir}/{name}_{method_name}.mp4" if method_name != "adaptive_interp_by_frame" else f"{result_dir}/{name}_adaptive.mp4"
 
                     if os.path.exists(gt_path) and os.path.exists(pred_path):
                         score = psnr(gt_path, pred_path)
@@ -41,7 +41,7 @@ def compare_psnr(gt_dir, result_dir, method_name, log_path="psnr_comparison_log.
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--method", choices=["mean", "adaptive"], required=True,
+    parser.add_argument("--method", choices=["mean", "adaptive","adaptive_interp_by_frame"], required=True,
                         help="选择要比较的插帧方法(mean 或 adaptive)")
     parser.add_argument("--threshold", type=float, default=0.98,
                         help="adaptive 方法使用的 SSIM 阈值")
@@ -50,6 +50,9 @@ if __name__ == "__main__":
     method = args.method
     if method == "adaptive":
         result_dir = os.path.join(RESULTS_DIR, f"adaptive_interp_{args.threshold}")
+        log_path = os.path.join(RESULTS_DIR, "psnr", f"{method}_{args.threshold}.txt")
+    elif method == "adaptive_interp_by_frame":
+        result_dir = os.path.join(RESULTS_DIR, f"adaptive_interp_by_frame_{args.threshold}")
         log_path = os.path.join(RESULTS_DIR, "psnr", f"{method}_{args.threshold}.txt")
     else:
         result_dir = os.path.join(RESULTS_DIR, f"{method}_interp")
