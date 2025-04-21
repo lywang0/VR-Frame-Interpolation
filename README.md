@@ -74,7 +74,7 @@ python rife.py
 ```bash
 python adaptive.py --threshold 0.98
 ```
-其中 threshold 表示以RIFE为基准的相邻每块平均 SSIM
+其中 threshold 表示以RIFE为基准的每块平均 SSIM
 
 ### 4. 执行帧级自适应插帧（逐对帧 SSIM）
 
