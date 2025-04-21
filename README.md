@@ -35,6 +35,7 @@ project/
 │   ├── compare.py                     # PSNR 比较脚本
 │   ├── evaluate.py                    # 视频质量评估（以RIFE作为参考基准）
 │   ├── figure.py                      # 画图脚本（PSNR/Latency）
+│   ├── configuration.py               # 读取文件路径
 ├── mean.py                          # 帧平均法批量插帧
 ├── rife.py                          # RIFE 插帧批处理
 ├── adaptive.py                      # 秒级自适应插帧
