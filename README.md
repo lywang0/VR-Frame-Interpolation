@@ -16,25 +16,25 @@
 ## 📁 项目结构
 
 ```
-multimedia_class/
+project/
 ├── data/                            # 原始 30FPS 视频块
-├── ECCV2022-RIFE/                   # RIFE 插帧模型与脚本（从RIFE官方仓库中下载）
+├── ECCV2022-RIFE/                   # RIFE 插帧模型与脚本（需要从RIFE官方仓库中下载）
 ├── results/                         # 输出目录
-│   ├── mean_interp/                 # 帧平均法插帧结果
-│   ├── rife_interp/                 # RIFE 插帧结果
-│   ├── adaptive_interp_*/           # 秒级自适应结果（按不同阈值）
-│   ├── adaptive_interp_by_frame_*/  # 帧级自适应结果
-│   ├── merged_video/                # 合并后的视频段和完整视频
-│   ├── psnr/                        # PSNR 日志输出
-│   ├── latency_psnr_summary.txt     # 综合评估日志
-│   ├── psnr.png / latency.png       # 图表可视化输出
+│   ├── mean_interp/                   # 帧平均法插帧结果
+│   ├── rife_interp/                   # RIFE 插帧结果
+│   ├── adaptive_interp_*/             # 秒级自适应结果（按不同阈值）
+│   ├── adaptive_interp_by_frame_*/    # 帧级自适应结果
+│   ├── merged_video/                  # 合并后的视频段和完整视频
+│   ├── psnr/                          # PSNR 日志输出
+│   ├── latency_psnr_summary.txt       
+│   ├── psnr.png / latency.png         
 ├── utils/                           # 工具模块
-│   ├── video_utils.py               # 视频帧提取、保存、均值插帧等
-│   ├── metric_utils.py              # PSNR, SSIM 计算工具
-│   ├── merge_blocks.py              # 多块视频拼接脚本
-│   ├── compare.py                   # PSNR 比较脚本
-│   ├── evaluate.py                  # 单个视频质量评估
-│   ├── figure.py                    # 画图脚本（PSNR/Latency）
+│   ├── video_utils.py                 # 视频帧提取、保存、均值插帧等
+│   ├── metric_utils.py                # PSNR, SSIM 计算工具
+│   ├── merge_blocks.py                # 视频拼接脚本
+│   ├── compare.py                     # PSNR 比较脚本
+│   ├── evaluate.py                    # 视频质量评估（以RIFE作为参考基准）
+│   ├── figure.py                      # 画图脚本（PSNR/Latency）
 ├── mean.py                          # 帧平均法批量插帧
 ├── rife.py                          # RIFE 插帧批处理
 ├── adaptive.py                      # 秒级自适应插帧
