@@ -1,7 +1,7 @@
 import os
 import re
 from collections import defaultdict
-from utils.configuration import RESULTS_DIR
+from configuration import RESULTS_DIR
 
 def parse_latency_logs(results_dir, output_log="latency_psnr_summary.txt"):
     second_latency = defaultdict(lambda: defaultdict(list))  # method+threshold -> second -> list[latency]

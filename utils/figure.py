@@ -1,7 +1,7 @@
 import re
 from collections import defaultdict
 import matplotlib.pyplot as plt
-from utils.configuration import RESULTS_DIR
+from configuration import RESULTS_DIR
 import os
 
 psnr_path = os.path.join(RESULTS_DIR, "latency_psnr_summary.txt")

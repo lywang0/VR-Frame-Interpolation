@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 from moviepy.editor import VideoFileClip, concatenate_videoclips
-from utils.configuration import DATA_DIR, RESULTS_DIR
+from configuration import DATA_DIR, RESULTS_DIR
 
 def merge_blocks(block_paths, output_path, rows=4, cols=6):
     # block_paths 是 [row][col] 二维列表
