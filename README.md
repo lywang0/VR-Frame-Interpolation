@@ -74,7 +74,11 @@ python rife.py
 ```bash
 python adaptive.py --threshold 0.98
 ```
-其中 threshold 表示每块平均 SSIM
+其中 threshold 表示每块平均 SSIM，
+如需测量生成延迟，请使用评估模式当场插帧并记录插帧时间。
+```bash
+python adaptive.py --threshold 0.98 --mode evaluate
+```
 
 ### 4. 执行帧级自适应插帧（逐对帧 SSIM）
 
