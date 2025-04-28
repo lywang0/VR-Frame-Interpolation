@@ -84,4 +84,4 @@ results_dir = RESULTS_DIR
 psnr_dir = os.path.join(results_dir, "psnr")
 latency_summary = parse_latency_logs(results_dir)
 psnr_summary = parse_psnr_logs(psnr_dir)
-write_summary_to_log(latency_summary, psnr_summary)
+write_summary_to_log(latency_summary, psnr_summary, f"{psnr_dir}/latency_psnr_summary.txt")
