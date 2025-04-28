@@ -64,7 +64,7 @@ def adaptive_interpolate(input_path, mean_path, rife_path, output_path, threshol
         block_name = os.path.basename(output_path)
         print(f"[evaluate] {block_name} | SSIM={avg_ssim:.4f} | "
             f"{method} | Latency={elapsed:.3f}s")
-        with open("adaptive_latency_log.txt", "a") as f:
+        with open(f"{block_name}/adaptive_latency_log.txt", "a") as f:
             f.write(f"{block_name}\tSSIM={avg_ssim:.4f}\tMETHOD={method}\tLATENCY={elapsed:.3f}s\n")
 
 

@@ -3,7 +3,7 @@ import re
 from collections import defaultdict
 from configuration import RESULTS_DIR
 
-def parse_latency_logs(results_dir, output_log="latency_psnr_summary.txt"):
+def parse_latency_logs(results_dir, output_log):
     second_latency = defaultdict(lambda: defaultdict(list))  # method+threshold -> second -> list[latency]
     interp_dirs = [d for d in os.listdir(results_dir) if "interp" in d]
     

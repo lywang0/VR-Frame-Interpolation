@@ -36,5 +36,5 @@ def run_rife_inference(log_path="rife_latency_log.txt"):
                         print(f"Skipping {input_file}, file not found.")
 
 if __name__ == "__main__":
-    run_rife_inference()
+    run_rife_inference(f"{RESULTS_DIR}/rife_interp/rife_latency_log.txt")
     print("All RIFE interpolation completed.")
